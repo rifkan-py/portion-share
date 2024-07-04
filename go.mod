@@ -1,3 +1,3 @@
 module github.com/rifkan-py/portion-share
 
-go 1.21.1
+go 1.22.2
