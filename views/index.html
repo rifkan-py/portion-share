@@ -13,8 +13,19 @@
 </head>
 
 <body>
-    <section class="mt-5 container mx-auto px-2 flex flex-col items-center justify-between">
+    <div class="shadow-md">
+        <div class="container mx-auto px-2 py-3 flex items-center justify-between">
+            <div></div>
+            <div class="flex items-center gap-5">
+                <a href="#" class="px-3 py-2">About</a>
+                <a href="#" class="px-3 py-2">Services</a>
+                <a href="#" class="px-3 py-2">Contact</a>
+                <a href="#" class="px-3 py-2">Plans</a>
+            </div>
+        </div>
+    </div>
 
+    <section class="mt-5 container mx-auto px-2 flex flex-col items-center justify-between">
         <label for="uploadFile1"
             class="bg-white text-gray-500 font-semibold text-base rounded max-w-md px-4 h-52 flex flex-col items-center justify-center cursor-pointer border-2 border-gray-300 border-dashed mx-auto font-[sans-serif]">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-11 mb-2 fill-gray-500" viewBox="0 0 32 32">
@@ -31,9 +42,15 @@
             <p class="text-xs font-medium text-gray-400 mt-2">PNG, JPG SVG, WEBP, and GIF are Allowed.</p>
         </label>
 
-        <div class="bg-gray-300 rounded-full w-full h-2.5 relative max-w-4xl mx-auto mt-8">
-            <div class="w-1/5 h-full rounded-full bg-green-500"></div>
-            <p class="text-sm text-green-500 font-bold absolute right-0 -top-6">20%</p>
+
+        <div class="w-full flex items-center justify-center" id="btnContainer">
+            <button 
+                type="button"
+                hx-post="/upload"
+                hx-target="#btnContainer"
+                class="mx-auto mt-8 mt-3 px-5 py-2.5 rounded-lg text-white text-sm tracking-wider font-medium border border-current outline-none bg-green-500 hover:bg-green-800 active:bg-blue-700">
+                Start Uploading your file
+            </button>
         </div>
     </section>
 </body>
