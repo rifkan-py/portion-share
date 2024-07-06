@@ -4,10 +4,14 @@ import (
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/rifkan-py/portion-share/internal/routes"
 )
 
 func main() {
 	r := http.NewServeMux()
+
+	routes.SetupRoutes(r)
 
 	srv := &http.Server{
 		Addr:              ":4200",
